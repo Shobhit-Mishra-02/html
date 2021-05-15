@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+
+    <title>Techno show</title>
+    <link rel="stylesheet" href="../css_files/pages.css">
+</head>
+
+<body>
+
+    <!-- Adding the navigation bar  -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Techno show</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="../../index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Topics
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="/pages/tkinter/page_1.html">Python tkinter project</a>
+                            </li>
+                            <li><a class="dropdown-item" href="#">Machine learning</a></li>
+                            <li><a class="dropdown-item" href="#">Django</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- This is for the content which we wil add in the blog. -->
+    <div class="container">
+        <div class="heading text-center my-5">
+            <h1>Project Calculator</h1>
+        </div>
+        <hr>
+        <div class="intro my-3">
+            <p>I have created this Calculator just to test my skills on the tkinter and believe me that it is very easy
+                with some line you can create such type of GUI, also it will give you a push to explore the tkinter
+                frame work and allow you to create some more projects on your own.<br>
+                Here is the look of our calculator</p>
+        </div>
+
+
+
+        <div class="cotainer d-flex justify-content-center my-5">
+            <img class='images' src="../../images/calc_img.png" alt="calculator Image">
+        </div>
+
+        <div class="Sub-content my-5">
+            <div class="sub-heading">
+                <h2>Starting the development of the calculator GUI</h2>
+            </div>
+            <p>Now as you have seen the image of the calculator so the basic flow of the work has been cleared that is
+                this GUI is having two parts the first where we will display the output and the second part is where we
+                will place the buttons</p>
+
+            <ol>
+                <li>Creating the constructor</li>
+                <div class="cotainer d-flex justify-content-center my-5">
+                    <img class='images' src="" alt="calculator Image">
+                </div>
+                <p>This constructor demands for the two parameters that is the width and the height of the GUI.Now in
+                    the first line I have created the object of the Tk, then in the next three lines I have fixed the
+                    size of the GUI. Then with wm_iconbitmap I have placed the icon image which will be displayed on the
+                    top left of the GUI and in the next I have given the title to the GUI "Calculator".Then I have
+                    created two frames that is f_1 and f_2, so the f_1 frame is for the entry widget where I will
+                    display the output and in the second frame f_2 I will place the Buttons.Then in the second last line
+                    I hace created the string text variable for the entry widget and in the last line I have created a
+                    empty string variable which will contain the content of the entry widget.</p>
+
+                <li>Creating the entry widget</li>
+                <div class="cotainer d-flex justify-content-center my-5">
+                    <img class='images' src="" alt="calculator Image">
+                </div>
+                <p>
+                    To create the entry widget here I have created a separate method and its name is entry_window. It is
+                    very simple to understand that in the first line I have packed the frame f_1 and its location is on
+                    the top of the GUI and it will fill the x-axis. In the next lines I have created the entry widget
+                    and packed it in the frame f_1.
+                </p>
+
+
+                <li>Putting the buttons in the GUI</li>
+                <div class="cotainer d-flex justify-content-center my-5">
+                    <img class='images' src="" alt="calculator Image">
+                </div>
+                <p>
+                    Here I have created the buttons for the calculator so here I have used the for loop for the this
+                    purpose and you can do the same thing without the for loop too.
+                    So in the first line I have packed the frame f_2 and given a location in such a way that it will
+                    cover all the area except the frame f_1 where I have placed the entry widget.
+                    Then you will see a list named as button_lt where I have stored the labels of the buttons and inside
+                    this list I have inserted six more list where each contains the three labels.
+                    After that I have created the for loop to place the buttons in the GUI and here I have used the grid
+                    method and also I have binded every button with a funtion named as click. So basically when some
+                    will click on a button then this function will call and it will perform some operations.
+                </p>
+
+
+                <li>Understanding the functionality of the buttons</li>
+                <div class="cotainer d-flex justify-content-center my-5">
+                    <img class='images' src="" alt="calculator Image">
+                </div>
+                <p>Now inside the method buttons_calculation there is a function called click. Now if you have read the
+                    above content then you have noticed that this function has been binded to every button. Now when
+                    user will click on the button this funton will store the label of the button in the variable x and
+                    the same thing I have written in the first line. Then I have used the if statement to check that
+                    whether the value of the x is equal to c or not, if it is true then clear the entry widget. Then I
+                    have used elif statement which checks that if x is equal to = then update the 'text_on_screen'
+                    variable where I have used eval. Now in the else statement I have written the two lines which will
+                    add the text_on_screen and the label of the button which has been stored in the x variable. Then
+                    update the entry widget screen.</p>
+            </ol>
+
+        </div>
+
+
+    </div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js" integrity="sha384-lpyLfhYuitXl2zRZ5Bn2fqnhNAKOAaM/0Kr9laMspuaMiZfGmfwRNFh8HlMy49eQ" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>
