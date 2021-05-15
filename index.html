@@ -1,203 +1,109 @@
 <!doctype html>
 <html lang="en">
-<style>
-    .blog-footer {
-        padding: 2.5rem 0;
-        color: #727272;
-        text-align: center;
-        background-color: #f9f9f9;
-        border-top: .05rem solid #e5e5e5;
-    }
-</style>
 
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Techno club</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+
+  <title>Techno show</title>
 </head>
 
 <body>
-    <!-- Adding the modals  -->
-    <div class="modal fade" id="Sign-in-Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="Sign-in-ModalLabel">Sign in</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="mb-3">
-                            <label for="name" class="col-form-label">Name:</label>
-                            <input type="text" class="form-control" id="name">
-                        </div>
-                        <div class="mb-3">
-                            <label for="passwd" class="col-form-label">Message:</label>
-                            <input type="password" class="form-control" name="passwd" id="passwd">
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Proceed</button>
-                </div>
-            </div>
-        </div>
+  <!-- Adding the navigation bar  -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Techno show</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Topics
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item" href="/pages/tkinter/page_1.html">Python tkinter project</a></li>
+              <li><a class="dropdown-item" href="#">Machine learning</a></li>
+              <li><a class="dropdown-item" href="#">Django</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Adding the sliders on the front page. -->
+  <div class="container">
+
+    <div class="p-4 p-md-5 mb-4 text-white rounded bg-dark my-4">
+      <div class="col-md-6 px-0">
+        <h1 class="display-4 fst-italic">Welcome to the Techno show</h1>
+        <p class="lead my-3">This is a place where you will get the knowledge about the different techical skills and just by examining by blogs you can get enough information about the techical skills.</p>
+        <!-- <p class="lead mb-0"><a href="#" class="text-white fw-bold">Continue reading...</a></p> -->
+      </div>
     </div>
 
-    <!-- Adding the navigation bar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Techno club</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">About us</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Courses
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Web development</a></li>
-                            <li><a class="dropdown-item" href="#">Machine learning</a></li>
-                            <li><a class="dropdown-item" href="#">Basic Python</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Support us</a></li>
-                            <li><a class="dropdown-item" href="#">Write about us</a></li>
-                        </ul>
-                    <li class="nav-item">
-                        <a class="nav-link" href="pages/contact.html">Contact us</a>
-                    </li>
+  </div>
 
-                </ul>
-
-                <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
-                <button class="btn btn-primary mx-2" data-bs-toggle="modal" data-bs-target="#Sign-in-Modal"
-                    data-bs-whatever="@mdo">Sign in</button>
-            </div>
+  <!-- Adding the cards  -->
+  <div class="container my-5">
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+      <div class="col">
+        <div class="card">
+          <img src="images/python.jpg" class="card-img-top" alt="Python" width="190px" height="250px">
+          <div class="card-body">
+            <h5 class="card-title">Python language tutorial</h5>
+            <p class="card-text">This a complete python couse for the python language and I have coverded every thing in
+              this couse.</p>
+            <a class="btn btn-outline-primary" href="#" role="button">Link</a>
+          </div>
         </div>
-    </nav>
-
-    <!-- Adding the slider -->
-    <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-                aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-                aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-                aria-label="Slide 3"></button>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="images/mac-learning.jpg" class="card-img-top" alt="Machine learning"width="190px" height="250px">
+          <div class="card-body">
+            <h5 class="card-title">Machine learning</h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
+              content. This content is a little bit longer.</p>
+            <a class="btn btn-outline-primary" href="#" role="button">Link</a>
+          </div>
         </div>
-
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="images/slider-1.jpg" class="d-block w-100" alt="Image" height="350px">
-                <div class="carousel-caption d-none d-md-block">
-                    <h1>Get ready for the upcoming python courses</h1>
-                    <p>This is the one of the best platform to invest you time and to learn new things.</p>
-                    <button type="button" class="btn btn-primary">Enrollment</button>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="images/slider-4.jpg" class="d-block w-100" alt="Image" height="350px">
-                <div class="carousel-caption d-none d-md-block">
-                    <h1>Web development</h1>
-                    <p>You can about the web development and its a complete couse where you will get to learn front and
-                        backend.</p>
-                    <button type="button" class="btn btn-primary">Enrollment</button>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="images/slider-3.jpg" class="d-block w-100" alt="Image" height="350px">
-                <div class="carousel-caption d-none d-md-block">
-                    <h1>Enjoy the java.</h1>
-                    <p>This is the first time chance to learn the Java with the live sessions too.</p>
-                    <button type="button" class="btn btn-primary">Enrollment</button>
-                </div>
-            </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="images/mac-learning.jpg" class="card-img-top" alt="Machine learning"width="190px" height="250px">
+          <div class="card-body">
+            <h5 class="card-title">Tkinter with python</h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
+              content. This content is a little bit longer.</p>
+            <a class="btn btn-outline-primary" href="#" role="button">Link</a>
+          </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-            data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-            data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
+      </div>
+
     </div>
+  </div>
+  <!-- Optional JavaScript; choose one of the two! -->
 
-    <!-- Adding the cards  -->
-    <div class="container d-flex my-3 justify-content-center align-content-center">
-        <div class="card mx-2" style="width: 18rem;">
-            <img src="images/data-sci.jpg" class="card-img-top" alt="data science" width="200px" height="200px">
-            <div class="card-body">
-                <h5 class="card-title">Data science</h5>
-                <p class="card-text">This is the one of the current trending topic in the field of the computer science,
-                    so what are you waiting for?</p>
-                <a href="#" class="btn btn-outline-primary">Data science</a>
-            </div>
-        </div>
-        <div class="card mx-2" style="width: 18rem;">
-            <img src="images/mac-learning.jpg" class="card-img-top" alt="machine learning" width="200px" height="200px">
-            <div class="card-body">
-                <h5 class="card-title">Machine learning</h5>
-                <p class="card-text">Machine learning, this topic is filled with the mathematics so if you are a lover
-                    of the math then this is the right place for you, so just go ahead.</p>
-                <a href="#" class="btn btn-outline-primary">Machine learning</a>
-            </div>
-        </div>
-        <div class="card mx-2" style="width: 18rem;">
-            <img src="images/robotics.jpg" class="card-img-top" alt="robotics" width="200px" height="200px">
-            <div class="card-body">
-                <h5 class="card-title">Robotics</h5>
-                <p class="card-text">So if you are interested in the field of the machine then the robots are waiting
-                    for you.</p>
-                <a href="#" class="btn btn-outline-primary">Robotics</a>
-            </div>
-        </div>
-    </div>
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+    crossorigin="anonymous"></script>
 
-    <!-- mid-content  -->
-    
-
-    <!-- Adding the footer  -->
-    <footer class="blog-footer d-flex justify-content-center align-content-center">
-        <p>Blog template built for <a href="https://getbootstrap.com/">Bootstrap</a> by <a
-                href="https://twitter.com/mdo">@mdo</a>.
-        </p>
-        <a href="#">Back to top</a>
-    </footer>
-    <!-- Optional JavaScript; choose one of the two! -->
-
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
-        crossorigin="anonymous"></script>
-
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
+  <!-- Option 2: Separate Popper and Bootstrap JS -->
+  <!--
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js" integrity="sha384-lpyLfhYuitXl2zRZ5Bn2fqnhNAKOAaM/0Kr9laMspuaMiZfGmfwRNFh8HlMy49eQ" crossorigin="anonymous"></script>
     -->
